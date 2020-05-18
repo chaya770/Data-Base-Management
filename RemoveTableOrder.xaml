@@ -1,0 +1,25 @@
+﻿<Window x:Class="MiniProjectGui.RemoveTableOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="RemoveTableOrder" Height="500" Width="1000">
+    <Grid>
+        <Grid>
+            <Grid>
+
+                <Button x:Name="remove" Background="Plum" FontSize="20" Content="Remove " HorizontalAlignment="Center" Width="106" Click="remove_Click" Margin="847,214,39,200" FontFamily="Georgia" />
+                <ComboBox x:Name="ordercombobox" SelectionChanged="ordercombobox_SelectionChanged" HorizontalAlignment="Left" Margin="246,44,0,0" VerticalAlignment="Top" Width="214" Height="22"/>
+                <ComboBox  x:Name="tablecombobox" SelectionChanged="tablecombobox_SelectionChanged"  HorizontalAlignment="Left" Margin="186,199,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+                <ComboBox x:Name="waitercombobox" HorizontalAlignment="Left" Margin="186,275,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+                <Label Content="Select an Order:" Background="Magenta" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Arial Black" Width="194" Height="36"/>
+                <Label Content="Select a table number: " Background="Violet" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.368,0.038" Width="194" FontFamily="Arial Black" Height="26" FontSize="14"/>
+                <Label Content="Select a waiter id" Background="Salmon" HorizontalAlignment="Left" Margin="21,250,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Height="26" Width="158" FontSize="14"/>
+                <Label Content="in order to add a table or/and a waiter to the order : please select them" HorizontalAlignment="Left" Background="Salmon" Margin="105,121,0,0" VerticalAlignment="Top" Height="26" FontFamily="Georgia" Width="488" FontSize="14"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

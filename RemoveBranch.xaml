@@ -1,0 +1,31 @@
+﻿<Window x:Class="MiniProjectGui.RemoveBranch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="RemoveBranch" Height="300" Width="300">
+    <Grid>
+     
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="Remove Branch:"  Background="Magenta" FontSize="40" Margin="0" FontFamily="Playbill"/>
+        <Grid  x:Name="branchdetailsgrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="removebranchcombobox" Grid.Column="1" HorizontalAlignment="Left" Margin="49,43,0,0" VerticalAlignment="Top" Width="188" Height="53" Grid.RowSpan="2"/>
+        </Grid>
+        <Button  x:Name="removebranch" Background="Plum" FontSize="40" Content="Remove" Grid.Row="2" Margin="51,10,62,10"  FontFamily="Playbill" Click="removebranch_Click" />
+
+    </Grid>
+</Window>

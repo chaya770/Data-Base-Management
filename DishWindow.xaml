@@ -1,0 +1,19 @@
+﻿<Window x:Class="MiniProjectGui.DishWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="DishWindow" Height="300" Width="300">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush  Stretch="Fill" ImageSource="Images/food2.jpg"  AlignmentX="Center" AlignmentY="Top"/>
+        </Grid.Background>
+        <Button Content="Select Dish" Name="selectbutton" Background="White" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.238,-0.462" Height="29" FontWeight="Bold" Click="selectbutton_Click" />
+        <Button Content="Add Dish" Name="addbutton" Background="White" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="140" Height="27" FontWeight="Bold" Click="addbutton_Click"/>
+        <Button Content="Delete  Dish" Name="deletebutton" Background="White" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Width="140" Height="29" FontWeight="Bold" Click="deletebutton_Click"/>
+        <Button Content="Update  Dish" Name="updatebutton" Background="White" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Width="140" Height="26" FontWeight="Bold" Click="updatebutton_Click" />
+    </Grid>
+</Window>

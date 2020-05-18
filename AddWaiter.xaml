@@ -1,0 +1,53 @@
+﻿<Window x:Class="MiniProjectGui.AddWaiter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="AddWaiter" Height="400" Width="700">
+    <Grid HorizontalAlignment="Left" Width="692">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="addButton" Background="Aquamarine" Content="Add"  FontSize="30" Grid.Row="2" Margin="89,10,113,10"  FontFamily="Magneto" Click="addButton_Click" />
+        <Label x:Name="label" Content="Add New Waiter" FontSize="30" Margin="0" Foreground="Aquamarine" FontFamily="Magneto"  />
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="143,86,0,0" Grid.Row="1" VerticalAlignment="Top" Height="146" Width="248" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="23"/>
+                <RowDefinition Height="Auto"/>
+
+
+            </Grid.RowDefinitions>
+            <Label Content="Phone" Background="PeachPuff" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,0" Grid.Row="5" VerticalAlignment="Center" FontFamily="Magneto" Height="30" Width="73"/>
+            <TextBox x:Name="phonetextbox"  Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Height="24" Margin="3,4,0,0" TextWrapping="Wrap" Text="{Binding NameLunch,Mode=TwoWay,NotifyOnValidationError=True,ValidatesOnExceptions=True}" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Waiter Id" Grid.Column="0" Background="PaleTurquoise" HorizontalAlignment="Left" Margin="3,4,0,5" Grid.Row="0" VerticalAlignment="Center" FontFamily="Magneto" Height="26" Width="74"/>
+            <Label Content="Name" Background="PaleVioletRed" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,0" VerticalAlignment="Top" Grid.Row="3" Grid.RowSpan="2" FontFamily="Magneto" Width="82"/>
+            <TextBox x:Name="nametextbox" Grid.Row="3" Grid.Column="1" Margin="3,4,0,8" VerticalAlignment="Center" Text="{Binding PriceLunch,Mode=TwoWay,NotifyOnValidationError=True,ValidatesOnExceptions=True}" HorizontalAlignment="Left" Width="120" Grid.RowSpan="2" Height="23" >
+
+            </TextBox>
+            <TextBox x:Name="idtextbox"  Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,0" TextWrapping="Wrap" Text="{Binding NameLunch,Mode=TwoWay,NotifyOnValidationError=True,ValidatesOnExceptions=True}" VerticalAlignment="Top" Width="120"/>
+
+
+
+        </Grid>
+
+        <Label Content="Enter Details:" Background="Plum" HorizontalAlignment="Left" Margin="42,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="174" FontFamily="Magneto" FontSize="18" Height="33"/>
+        <Grid.Background>
+            <ImageBrush  Stretch="Fill" ImageSource="images/WAITER.jpg"  AlignmentX="Center" AlignmentY="Top"/>
+        </Grid.Background>
+
+
+    </Grid>
+</Window>

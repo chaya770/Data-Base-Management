@@ -1,0 +1,46 @@
+﻿<Window x:Class="MiniProjectGui.AddDishInBranch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="AddDishInBranch" Height="300" Width="700">
+    <Grid HorizontalAlignment="Left" Width="692">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="addButton" Background="Aquamarine" Content="Add"  FontSize="30" Grid.Row="2" Margin="93,10,109,10" FontFamily="Magneto" Click="addButton_Click" />
+        <Label x:Name="label" Content="Add New Dish In Branch" FontSize="30" Margin="0" Foreground="Aquamarine" FontFamily="Magneto"  />
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="136,75,0,0" Grid.Row="1" VerticalAlignment="Top" Height="157" Width="278" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="37" />
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="Auto" MinHeight="11"/>
+
+
+            </Grid.RowDefinitions>
+            <Label Content="Bramch Number" Grid.Column="0" Background="Plum" HorizontalAlignment="Left" Margin="3,0,0,3" Grid.Row="2" VerticalAlignment="Bottom" FontFamily="Magneto" Width="95" Height="40"/>
+            <ComboBox x:Name="branchnumberCombobox" Grid.Column="1" Grid.Row="2" Margin="3,3,-101,3" />
+            <Label Content="Dish Number" Background="PaleVioletRed" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,0" VerticalAlignment="Top" Grid.Row="3" FontFamily="Magneto" Width="95" Height="34"/>
+            <ComboBox x:Name="dishnumberCombobox" Grid.Column="1"  Grid.Row="3" Margin="3,4,-101,0" />
+
+
+        </Grid>
+
+        <Label Content="Enter Details:" Background="Plum" HorizontalAlignment="Left" Margin="42,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" FontFamily="Magneto"/>
+
+
+
+    </Grid>
+</Window>

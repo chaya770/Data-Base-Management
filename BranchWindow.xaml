@@ -1,0 +1,19 @@
+﻿<Window x:Class="MiniProjectGui.BranchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="BranchWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush  Stretch="Fill" ImageSource="images/branch.jpg"  AlignmentX="Center" AlignmentY="Top"/>
+        </Grid.Background>
+        <Button x:Name="selectButton" Content="Select Branch" Background="DarkRed"  HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.238,-0.462" Height="29" FontWeight="Bold"  Click="selectButton_Click"/>
+        <Button x:Name="addButton" Content="Add Branch"  Background="DarkRed" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="140" Height="27" FontWeight="Bold"  Click="addButton_Click" />
+        <Button x:Name="updateBranchButton" Content="Update Branch" Background="DarkRed" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Width="140" Height="29" FontWeight="Bold" Click="updateBranchButton_Click"  />
+        <Button x:Name="deleteButton" Content="Delete Branch" Background="DarkRed" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Width="140" Height="26" FontWeight="Bold" Click="deleteButton_Click" />
+
+    </Grid>
+</Window>

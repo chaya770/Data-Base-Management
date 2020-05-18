@@ -1,0 +1,24 @@
+﻿<Window x:Class="MiniProjectGui.TableOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="TableOrder" Height="300" Width="700">
+    <Grid>
+
+        <DataGrid x:Name="tableorderDataGrid"  RowDetailsVisibilityMode="VisibleWhenSelected" Margin="179,42,211,0"/>
+        <Label Content="List of TableOrder:" FontSize="30" Background="Aqua" HorizontalAlignment="Center" Margin="216,-4,228,0" VerticalAlignment="Top" Width="248" FontFamily="Old English Text MT" Height="40" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.948"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.68"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+    </Grid>
+</Window>
+

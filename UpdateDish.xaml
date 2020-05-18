@@ -1,0 +1,39 @@
+﻿<Window x:Class="MiniProjectGui.UpdateDish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UpdateDish" Height="546.809" Width="700">
+    <Grid>
+        <Grid Margin="0,-19,0,19">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="updatedish" Background="Plum" Grid.Row="2" Content="UpDate" HorizontalAlignment="Center" Width="211" FontSize="40" Click="updatedish_Click" Margin="67,87,68,41" FontFamily="Playbill" />
+            <ComboBox x:Name="updatedishcombobox" SelectionChanged="updatedishcombobox_SelectionChanged" HorizontalAlignment="Left" Margin="76,101,0,0" VerticalAlignment="Top" Width="242" Height="48"/>
+            <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="41,10,0,0" VerticalAlignment="Top" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="32" />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="" Grid.Column="0" HorizontalAlignment="Left" Margin="3,0,0,3" Grid.Row="0" VerticalAlignment="Center" Height="29" Width="79"/>
+                <Label Content="Name Lunch:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" VerticalAlignment="Center" Height="26" Width="79"/>
+                <TextBox x:Name="dishName" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="5,5,-2,3" Text="{Binding NameLunch, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+                <Label Content="Price Lunch:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="2" VerticalAlignment="Center" Height="26" Width="73"/>
+                <TextBox x:Name="dishPrice" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="2" Text="{Binding PriceLunch, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+                <Label Content="Size Lunch:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="26" Width="68"/>
+            </Grid>
+            <Label Content=" Please Select a Dish:" Background="CornflowerBlue" FontSize="40" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="237" FontFamily="Playbill"/>
+            <Label Content="Category" HorizontalAlignment="Left" Margin="51,106,0,0" Grid.Row="1" VerticalAlignment="Top" Width="72"/>
+            <ComboBox x:Name="sizecomboBox" HorizontalAlignment="Left" Margin="128,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+            <ComboBox x:Name="categorycomboBox" HorizontalAlignment="Left" Margin="128,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="MiniProjectGui.TableOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="TableOrderWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush  Stretch="Fill" ImageSource="images/table.jpg" AlignmentX="Center" AlignmentY="Top"/>
+        </Grid.Background>
+        <Button Content="Select Table Order" Name="selectButton" Background="White" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.238,-0.462" Height="29" FontWeight="Bold" Click="selectButton_Click" />
+        <Button Content="Add  Table Order" Name="addButton" Background="White" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="140" Height="27" FontWeight="Bold" Click="addButton_Click"/>
+        <Button Content="Delete  Table Order" Name="deleteButton" Background="White" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Width="140" Height="29" FontWeight="Bold" Click="deleteButton_Click"/>
+        <Button Content="Update  Table Order" Name="updateButton" Background="White" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Width="140" Height="26" FontWeight="Bold" Click="updateButton_Click"/>
+    </Grid>
+</Window>

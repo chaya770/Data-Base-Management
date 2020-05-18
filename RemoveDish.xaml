@@ -1,0 +1,44 @@
+﻿<Window x:Class="MiniProjectGui.RemoveDish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RemoveDish" Height="300" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="Remove Dish:"  Background="Magenta" FontSize="40" Margin="0" FontFamily="Playbill"/>
+        <Grid  x:Name="dishdetailsgrid" Grid.Row="1" Margin="0,5,0,49" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="removedishcombobox"  SelectionChanged="removedishcombobox_SelectionChanged"  Grid.Column="1" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" Width="61" Height="27" RenderTransformOrigin="0.486,0.222"/>
+            <TextBox x:Name="dishName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="316,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="166"/>
+            <TextBox x:Name="dishSize" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="316,0,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="72"/>
+            <TextBox x:Name="dishPrice" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="316,28,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="72"/>
+            <TextBox x:Name="dishCategory" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="316,51,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.475,0.739"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,29,0,0" TextWrapping="Wrap" Text="Select A Plate " VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.068"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dish Name" VerticalAlignment="Top" Grid.Column="1" Margin="228,56,0,0"/>
+            <TextBlock x:Name="textBlock2" Grid.Column="1" HorizontalAlignment="Left" Margin="228,7,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Size dish" VerticalAlignment="Top" Width="58"/>
+            <TextBlock x:Name="textBlock3" Grid.Column="1" HorizontalAlignment="Left" Margin="228,37,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Width="70"/>
+            <TextBlock x:Name="textBlock4" Grid.Column="1" HorizontalAlignment="Left" Margin="228,63,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="67"/>
+        </Grid>
+        <Button  x:Name="removedish" Background="Plum" FontSize="40" Content="Remove" Grid.Row="2" Margin="10,0,10,10" Click="removedish_Click" FontFamily="Playbill" />
+
+    </Grid>
+</Window>

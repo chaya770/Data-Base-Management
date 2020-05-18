@@ -1,0 +1,85 @@
+﻿<Window x:Class="MiniProjectGui.RemoveOrderDish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RemoveOrderDish" Height="700" Width="1000">
+
+  
+
+    <Grid Margin="0,0,2,0" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="299"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="2" LastChildFill="True" Margin="10,10,0,154" Grid.RowSpan="2">
+            <Expander x:Name="expanderr"  Header="Remove Dish for this Order" DockPanel.Dock="Top" Height="110" Margin="0,0,10,0">
+                <StackPanel Height="100" Margin="0,0,8,0">
+                    <StackPanel Orientation="Horizontal"/>
+                    <DockPanel>
+                        <Label DockPanel.Dock="Left" Background="Azure" Content="Select Dish:" Margin="10" FontFamily="Old English Text MT"/>
+                        <ComboBox x:Name="dishesComboBox"   MinWidth="30" Margin="10"/>
+                    </DockPanel>
+                </StackPanel>
+            </Expander>
+        </DockPanel>
+        <Button x:Name="removeButton" Background="Orange" Click="removeButton_Click" Content="Remove" FontSize="30" Grid.Row="3" Margin="494,176,284,75"  FontFamily="Playbill" />
+        <Label x:Name="label" Content="Remove Dishes From an Order" Background="PaleGoldenrod" FontSize="50" Margin="0" FontFamily="Old English Text MT"/>
+        <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="24,16,0,0" Grid.Row="1" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+
+            <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="83,28,0,0" Grid.Row="7" VerticalAlignment="Top" RenderTransformOrigin="0.144,1.469" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+            </Grid>
+
+
+
+
+
+        </Grid>
+        <Button Content="Remove Dishes:" Background="Yellow" FontSize="20"  Click="Button_Click" HorizontalAlignment="Left" Margin="94,276,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" FontFamily="Playbill"/>
+        <Grid x:Name="grid3"  HorizontalAlignment="Left" Margin="24,240,0,0" Grid.Row="1" VerticalAlignment="Top" Width="109">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="184" Margin="530,76,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="orderNumComboBox" HorizontalAlignment="Left" SelectionChanged="orderNumComboBox_SelectionChanged" Margin="350,76,0,0" Grid.Row="1" VerticalAlignment="Top" Width="206"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="40,82,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Please Select a Num Order " VerticalAlignment="Top" RenderTransformOrigin="-1.286,-1.687" Height="34" Width="244" FontSize="20"/>
+
+
+    </Grid>
+
+
+</Window>

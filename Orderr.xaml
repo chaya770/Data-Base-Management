@@ -1,0 +1,19 @@
+﻿<Window x:Class="MiniProjectGui.Orderr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Orderr" Height="300" Width="700">
+    <Grid>
+
+        <DataGrid x:Name="orderDataGrid"  RowDetailsVisibilityMode="VisibleWhenSelected" Margin="204,42,200,0"/>
+        <Label Content="List of Orders:" FontSize="30" Background="Aqua" HorizontalAlignment="Center" Margin="216,-4,228,0" VerticalAlignment="Top" Width="248" FontFamily="Old English Text MT" Height="40" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.948"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.68"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+    </Grid>
+</Window>

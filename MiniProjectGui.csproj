@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61D4A400-21DB-44B9-B2AB-806509D61A3A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiniProjectGui</RootNamespace>
+    <AssemblyName>MiniProjectGui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddBranch.xaml.cs">
+      <DependentUpon>AddBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddDishInBranch.xaml.cs">
+      <DependentUpon>AddDishInBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddDishInOrder.xaml.cs">
+      <DependentUpon>AddDishInOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddHomeOrder.xaml.cs">
+      <DependentUpon>AddHomeOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddTableOrder.xaml.cs">
+      <DependentUpon>AddTableOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddWaiter.xaml.cs">
+      <DependentUpon>AddWaiter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Branch.xaml.cs">
+      <DependentUpon>Branch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BranchWindow.xaml.cs">
+      <DependentUpon>BranchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DBSingleton.cs" />
+    <Compile Include="DeleteDishInBranch.xaml.cs">
+      <DependentUpon>DeleteDishInBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteHomeOrder.xaml.cs">
+      <DependentUpon>DeleteHomeOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteWaiter.xaml.cs">
+      <DependentUpon>DeleteWaiter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dish.xaml.cs">
+      <DependentUpon>Dish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DishInBranch.xaml.cs">
+      <DependentUpon>DishInBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DishInBrunchWindow.xaml.cs">
+      <DependentUpon>DishInBrunchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DishInOrderWindow.xaml.cs">
+      <DependentUpon>DishInOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DishWindow.xaml.cs">
+      <DependentUpon>DishWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.xaml.cs">
+      <DependentUpon>Functions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeOrder.xaml.cs">
+      <DependentUpon>HomeOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeOrderWindow.xaml.cs">
+      <DependentUpon>HomeOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDish.xaml.cs">
+      <DependentUpon>OrderDish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderrWindow.xaml.cs">
+      <DependentUpon>OrderrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Querys.xaml.cs">
+      <DependentUpon>Querys.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveBranch.xaml.cs">
+      <DependentUpon>RemoveBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveOrder.xaml.cs">
+      <DependentUpon>RemoveOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveDish.xaml.cs">
+      <DependentUpon>RemoveDish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveOrderDish.xaml.cs">
+      <DependentUpon>RemoveOrderDish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveTableOrder.xaml.cs">
+      <DependentUpon>RemoveTableOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableOrder.xaml.cs">
+      <DependentUpon>TableOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableOrderWindow.xaml.cs">
+      <DependentUpon>TableOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs" />
+    <Compile Include="UpadateTableOrder.xaml.cs">
+      <DependentUpon>UpadateTableOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBranch.xaml.cs">
+      <DependentUpon>UpdateBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDish.xaml.cs">
+      <DependentUpon>UpdateDish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDishInBranch.xaml.cs">
+      <DependentUpon>UpdateDishInBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHomeOrder.xaml.cs">
+      <DependentUpon>UpdateHomeOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOrderDishh.xaml.cs">
+      <DependentUpon>UpdateOrderDishh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOrderr.xaml.cs">
+      <DependentUpon>UpdateOrderr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWaiter.xaml.cs">
+      <DependentUpon>UpdateWaiter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Waiter.xaml.cs">
+      <DependentUpon>Waiter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WaiterWindow.xaml.cs">
+      <DependentUpon>WaiterWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddDishInBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddDishInOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddHomeOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddTableOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddWaiter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Branch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BranchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteDishInBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteHomeOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteWaiter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DishInBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DishInBrunchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DishInOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DishWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Functions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Querys.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemoveBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemoveOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AddDish.xaml.cs">
+      <DependentUpon>AddDish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrder.xaml.cs">
+      <DependentUpon>AddOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageConverter.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Orderr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemoveDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemoveOrderDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemoveTableOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpadateTableOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateDishInBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateHomeOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateOrderDishh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateOrderr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateWaiter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Waiter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WaiterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyEnum.cs" />
+    <Compile Include="Orderr.xaml.cs">
+      <DependentUpon>Orderr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\resturant.jpg" />
+    <Resource Include="images\table.jpg" />
+    <Resource Include="images\tablePicture.jpg" />
+    <Resource Include="images\WAITER.jpg" />
+    <Resource Include="images\WAITER2.jpg" />
+    <Resource Include="images\26579607-r-tro-menu-du-restaurant-de-style-vintage-con-oit-ensemble-de-titres-et-symboles-calligraphiques-sty[1].jpg" />
+    <Resource Include="images\37532421-restaurant-rafra-chissements-menu-format-vectoriel-tableau[1].jpg" />
+    <Resource Include="images\empty_image.gif" />
+    <Resource Include="images\images0U2TNN5Y.jpg" />
+    <Resource Include="images\images134XFJXJ.jpg" />
+    <Resource Include="images\images18PWBMEU.jpg" />
+    <Resource Include="images\images4W4NYGKN.jpg" />
+    <Resource Include="images\images9RAEOMKS.jpg" />
+    <Resource Include="images\imagesDJ1P9S50.jpg" />
+    <Resource Include="images\imagesG2YESCXU.jpg" />
+    <Resource Include="images\imagesHTH0251E.jpg" />
+    <Resource Include="images\imagesP9C7Q3LV.jpg" />
+    <Resource Include="images\imagesY61BYYOU.jpg" />
+    <Resource Include="images\branch.jpg" />
+    <Resource Include="images\cheez.jpg" />
+    <Resource Include="images\dish.jpg" />
+    <Resource Include="images\drinkandfood .jpg" />
+    <Resource Include="images\food2.jpg" />
+    <Resource Include="images\homeOrder.jpg" />
+    <Content Include="images\imgres.htm" />
+    <Resource Include="images\orderD.jpg" />
+    <Content Include="images\photo_37532421_restaurant-rafra-chissements-menu-format-vectoriel-tableau.htm" />
+    <Resource Include="images\sans-titre.png" />
+    <Resource Include="images\th2BSEW560.jpg" />
+    <Resource Include="images\th6AAVTMH2.jpg" />
+    <Resource Include="images\th6XTH8V1P.jpg" />
+    <Resource Include="images\th7SFLLTFW.jpg" />
+    <Resource Include="images\thOBLCCORZ.jpg" />
+    <Resource Include="images\thSU28W6GN.jpg" />
+    <Resource Include="images\thXOSNGSZ1.jpg" />
+    <Resource Include="images\thXQKRZZ3S.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

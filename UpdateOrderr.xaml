@@ -1,0 +1,38 @@
+﻿<Window x:Class="MiniProjectGui.UpdateOrderr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UpdateOrderr" Height="500" Width="700">
+    <Grid Height="436" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <ComboBox x:Name="updateordercombobox" SelectionChanged="updateordercombobox_SelectionChanged" HorizontalAlignment="Left" Margin="246,44,0,0" VerticalAlignment="Top" Width="214" Height="22"/>
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="42,82,0,0" VerticalAlignment="Top" Height="96" Width="228">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Customer Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <Label Content="Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" Width="73"/>
+            <DatePicker x:Name="dDatePicker" Grid.Column="1" SelectedDateChanged="dDatePicker_SelectedDateChanged"  HorizontalAlignment="Left" Margin="3" Grid.Row="3" SelectedDate="{Binding D, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center"/>
+            <TextBox x:Name="customerName" Grid.Column="1" HorizontalAlignment="Left" Margin="0,1,0,8" Grid.Row="2" TextWrapping="Wrap"  Width="120"/>
+        </Grid>
+        <Label Content="Select an Order:" Background="Magenta" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Algerian" Width="194" Height="36"/>
+
+        <Button x:Name="updateorder" Background="Plum" FontSize="20" Content="UpDate"   Click="updateorder_Click" Height="37" VerticalAlignment="Bottom" Margin="260,0,337,185"  />
+
+    </Grid>
+</Window>

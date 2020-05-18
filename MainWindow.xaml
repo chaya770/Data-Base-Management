@@ -1,0 +1,21 @@
+﻿<Window x:Class="MiniProjectGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush  Stretch="Fill" ImageSource="Images/resturant.jpg"  AlignmentX="Center" AlignmentY="Top"/>
+        </Grid.Background>
+        <Button Content="Dish" Name="dishbutton"  HorizontalAlignment="Left" Margin="376,172,0,0" VerticalAlignment="Top" Width="112" Height="36" RenderTransformOrigin="0.502,0.188" FontWeight="Bold" Click="dishbutton_Click"/>
+        <Button Content="Order" Name="orderbutton" HorizontalAlignment="Left" Margin="376,120,0,0" VerticalAlignment="Top" Width="112" Height="36" FontWeight="Bold" Click="orderbutton_Click"/>
+        <Button Content="Waiter" Name="waiterbutton" HorizontalAlignment="Left" Margin="376,71,0,0" VerticalAlignment="Top" Width="112" Height="36" Click="waiterbutton_Click" FontWeight="Bold"/>
+        <Button Content="Home Order" Name="homeorderbutton" HorizontalAlignment="Left" Margin="29,172,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="-1.087,-0.562" Height="36" Click="homeorderbutton_Click" FontWeight="Bold"/>
+        <Button Content="Dish In Order" Name="dishinorderbutton" HorizontalAlignment="Left" Margin="29,71,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="-0.395,-0.1" Height="36" FontWeight="Bold" Click="dishinorderbutton_Click" />
+        <Button Content="Dish In Branch" Name="dishinbranchbutton" HorizontalAlignment="Left" Margin="29,17,0,0" VerticalAlignment="Top" Width="112" Height="36" Click="dishinbranchbutton_Click" FontWeight="Bold"/>
+        <Button Content="Branch" Name="branchbutton" HorizontalAlignment="Left" Margin="376,17,0,0" VerticalAlignment="Top" Width="112" Height="36" Click="branchbutton_Click" FontWeight="Bold"/>
+        <Button Content="Table Order" Name="tableorderbutton" HorizontalAlignment="Left" Margin="29,120,0,0" VerticalAlignment="Top" Width="112" Height="36" FontWeight="Bold" Click="tableorderbutton_Click"/>
+        <Button x:Name="querysButton" Content="Querys" Click="querysButton_Click" HorizontalAlignment="Left" Margin="119,250,0,0" VerticalAlignment="Top" Width="112" Height="36" FontWeight="Bold"/>
+        <Button x:Name="functionsButton" Content="Functions" Click="functionsButton_Click"  Width="112" Height="36" FontWeight="Bold" HorizontalAlignment="Left" Margin="290,250,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
+

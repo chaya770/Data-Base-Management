@@ -1,0 +1,16 @@
+﻿<Window x:Class="MiniProjectGui.OrderDish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="OrderDish" Height="300" Width="700">
+    <Grid>
+
+        <DataGrid x:Name="orderDataGrid"  RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="orderDataGrid_SelectionChanged" Margin="283,46,344,0"/>
+
+        <Label Content="List of Dishes Per Order:" FontSize="30" Background="Aqua" HorizontalAlignment="Center" Margin="182,-4,152,0" VerticalAlignment="Top" Width="358" FontFamily="Old English Text MT" Height="45"/>
+    </Grid>
+</Window>
+

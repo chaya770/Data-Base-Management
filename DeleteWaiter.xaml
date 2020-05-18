@@ -1,0 +1,49 @@
+﻿<Window x:Class="MiniProjectGui.DeleteWaiter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="DeleteWaiter" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <Label Content="Remove Waiter:" FontSize="40" Background="AliceBlue" Margin="0" FontFamily="Playbill"/>
+        <Grid x:Name="waiterDetailsGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="removewaitercombobox" Grid.Column="1" HorizontalAlignment="Left" Margin="71,67,0,0" VerticalAlignment="Top" Width="145" Height="41" Grid.RowSpan="2"/>
+        </Grid>
+
+        <Button x:Name="removeButton"  Background="Pink" Content="Remove" FontSize="30" Grid.Row="2" Margin="10" Click="removeButton_Click" FontFamily="Playbill" >
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=nameTextBox,Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=numOrderTextBox,Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Grid.Background>
+            <ImageBrush  Stretch="Fill" ImageSource="images/WAITER.jpg"  AlignmentX="Center" AlignmentY="Top"/>
+        </Grid.Background>
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="MiniProjectGui.AddHomeOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectGui"
+        mc:Ignorable="d"
+        Title="AddHomeOrder" Height="500" Width="700">
+    <Grid HorizontalAlignment="Left" Width="692">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="addHomeOrderButton" Background="Aquamarine" Content="Add"  FontSize="30" Grid.Row="2" Margin="89,10,113,10"  FontFamily="Magneto" Click="addHomeOrderButton_Click" />
+        <Label x:Name="label" Content="Add New Home Order" FontSize="30" Margin="0" Foreground="Aquamarine" FontFamily="Magneto"  />
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="156,94,0,0" Grid.Row="1" VerticalAlignment="Top" Height="147" Width="317" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="126"/>
+                <ColumnDefinition Width="Auto" MinWidth="158" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="43"/>
+                <RowDefinition Height="43" />
+                <RowDefinition Height="6"/>
+                <RowDefinition/>
+
+
+            </Grid.RowDefinitions>
+
+            <Label Content="Order Number" Grid.Column="0" Background="Plum" HorizontalAlignment="Left" Margin="3,0,0,1" Grid.Row="2" VerticalAlignment="Bottom" FontFamily="Georgia" Width="111" Height="32" FontSize="14"/>
+            <ComboBox x:Name="ordernumberCombobox" Grid.Column="1"  Grid.Row="2" Margin="15,10,-8,3" />
+            <Label Content="Adress" Background="PaleVioletRed" Grid.Column="0" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Top" Grid.Row="3" FontFamily="Georgia" Width="111" Height="33" FontSize="14"/>
+            <TextBox x:Name="adresstextbox" Grid.Row="3" Grid.Column="1" Margin="15,10,-8,1" VerticalAlignment="Center"  HorizontalAlignment="Left" Width="153" Height="32" />
+
+
+
+        </Grid>
+
+        <Label Content="Enter Details:" Background="Plum" HorizontalAlignment="Left" Margin="42,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" FontFamily="Arial Black" Height="33" FontSize="14"/>
+
+
+    </Grid>
+</Window>
